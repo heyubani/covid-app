@@ -1,0 +1,54 @@
+.country-body{
+  width:90%;
+  margin: auto;
+  display: block;
+  justify-content:space-between;
+}
+.country-card {
+  width:  90%;
+  height: 100%;
+  margin: auto;
+  margin-left: 20px;
+  display: block;
+  margin: 4px 10px;
+  margin-top: 20px;
+  background: white;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.1);
+}
+.country-card-sub {
+  padding: 2px 10px;
+  display: block;
+  background-color: whitesmoke;
+}
+
+
+ul, li {
+    list-style: none;
+}
+
+
+/* search css */
+
+form {
+  width: 90%;
+  height: 50px;
+  margin: 5px auto;
+  padding: 10px;
+  margin-top: 30px;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+input {
+  width: 84%;
+  height: 40px;
+  border: none;
+}
+
+@media screen and (max-width: 400px - 800px) {
+  .country-card {
+    width: auto;
+    padding: 5px;
+    margin: 10px;
+  }
+}

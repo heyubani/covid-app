@@ -1,0 +1,41 @@
+.card-container {
+   display: flex;
+   justify-content:space-between; 
+   display: flex;
+   width:90%;
+   margin: auto;
+}
+
+.card-container::after,.card-container::before{
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  background-color: white;
+  transition: 0.3s;
+  width: 30%;
+  padding: 0 10px;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.sub-container {
+  padding: 2px 16px;
+}
+
+
+@media screen and (max-width: 400px) {
+  .card-container{
+    display: block;
+    padding: 10px;
+    margin: 5px;
+  }
+  .card {
+    width: 100%;
+  }
+}
