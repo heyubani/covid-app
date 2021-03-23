@@ -12,12 +12,23 @@
   clear: both;
 }
 
+.t1 {
+  color: gray;
+}
+
+.t2{
+  color: red;
+}
+
+.t3{
+  color: green;
+}
 .card {
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   background-color: white;
   transition: 0.3s;
   width: 30%;
-  padding: 0 10px;
+  margin: 10px 10px 10px 10px;
 }
 
 .card:hover {
@@ -25,15 +36,15 @@
 }
 
 .sub-container {
-  padding: 2px 16px;
+  padding: 2px 10px;
 }
 
 
 @media screen and (max-width: 400px) {
   .card-container{
     display: block;
-    padding: 10px;
-    margin: 5px;
+    padding: 5px;
+    margin: 3px;
   }
   .card {
     width: 100%;

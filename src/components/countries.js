@@ -20,8 +20,7 @@ class Countries extends Component {
 
 	onSubmit = (e) => {
 		e.preventDefault();
-		const newCountryList = this.state.countries.filter(
-			(id) => id.country.toLocaleLowerCase() === this.state.searchText.toLocaleLowerCase() ? this.state.searchText : id="Not found"
+		const newCountryList = this.state.countries.filter(id =>  id.country.toLowerCase().indexOf( this.state.searchText.toLowerCase() ) !== -1
 		);
 		this.setState({ countries: newCountryList, searchText: '' });
 	};
@@ -39,17 +38,22 @@ class Countries extends Component {
 
 	render() {
 
-		const queries = [{
+	const queries = [{
     columns: 2,
     query: 'min-width: 500px'
-  }, {
+     }, {
     columns: 3,
     query: 'min-width: 1000px'
-  }];
-
+     }];
+        
 		return (
 			<div className="country-body">
-				<Search onChange={this.onChange} onSubmit={this.onSubmit} className="searhcBox" />
+				<Search 
+				onChange={this.onChange} 
+				value={this.state.searchText }
+				onSubmit={this.onSubmit} 
+				className="searhcBox" 
+				/>
 
 				<Columns queries={queries}>
 					{this.state.countries.map((data, id) => {

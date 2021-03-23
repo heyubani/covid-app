@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import '../Style/search.css';
 
 export default class Search extends Component {
 	
 	render() {
-
+          
+		
 		return (
 			<React.Fragment>
 				<form 
@@ -15,6 +15,7 @@ export default class Search extends Component {
 						<input 
 						className="inputBox"
 						type="text" 
+						value={this.props.value}
 						onChange={this.props.onChange} 
 						placeholder="search country" 
 						/>

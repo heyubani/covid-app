@@ -2,16 +2,18 @@
   text-align: center;
 }
 
-.logo {
-  height: 40px;
-  width: 50px;
+.img-logo {
+  height: 100%;
+  width: auto;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
+body { background-color: rgba(238, 238, 238, 0.534);}
+
+ 
+  .img-logo {
     animation: App-logo-spin infinite 10s linear;
   }
-}
+
 
 .App-header {
   background-color: #282c34;
@@ -24,11 +26,11 @@
   color: white;
 }
 
-.logo {
+.logo-div {
   position: absolute;
-  left: 115px;
+  left: 155px;
   height: 80px;
-  width: 50px;
+  width: auto;
 }
 
 .header-text {
@@ -39,11 +41,30 @@
   color: white;
 }
 
-body { background-color: rgba(238, 238, 238, 0.534);}
+
+
+@media screen and (max-width: 400px){
+  .App-header {
+  display: flex;
+  justify-content: space-between;
+
+}.logo-div{
+    position: absolute;
+    left: 22px;
+    height: 45px;
+    width: auto;
+}
+.header-text{    
+    margin-left: 114px;
+    font-size: calc(16px + 1vmin);
+    font-family: 'Berkshire Swash', cursive;
+    color: white;
+}
+}
 
 @keyframes App-logo-spin {
   from {
-    transform: rotate(0deg);
+    transform: rotate(0);
   }
   to {
     transform: rotate(360deg);
