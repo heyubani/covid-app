@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  box-sizing: border-box;
 }
 
 .img-logo {
@@ -11,6 +12,7 @@ body { background-color: rgba(238, 238, 238, 0.534);}
 
  
   .img-logo {
+    flex-grow: 1 ;
     animation: App-logo-spin infinite 10s linear;
   }
 
@@ -18,24 +20,29 @@ body { background-color: rgba(238, 238, 238, 0.534);}
 .App-header {
   background-color: #282c34;
   min-height: 10vh;
+  min-width: 100%;
   display: flex;
   position: relative;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  margin: auto;
 }
 
 .logo-div {
-  position: absolute;
   left: 155px;
   height: 80px;
   width: auto;
 }
 
+
 .header-text {
-  display: block;
-  justify-content: end;
+  bottom:  5px;
+  display: flex;
+  flex-shrink: -1;
+  justify-content: center;
+  align-items: center;
   font-size: calc(20px + 2vmin);
   font-family: 'Berkshire Swash', cursive;
   color: white;
@@ -43,24 +50,17 @@ body { background-color: rgba(238, 238, 238, 0.534);}
 
 
 
-@media screen and (max-width: 400px){
-  .App-header {
-  display: flex;
-  justify-content: space-between;
-
-}.logo-div{
-    position: absolute;
-    left: 22px;
-    height: 45px;
-    width: auto;
-}
-.header-text{    
-    margin-left: 114px;
-    font-size: calc(16px + 1vmin);
+@media screen and (max-width:736px){
+ .logo-div{
+   height: 46px;
+ }
+.header-text{  
+    font-size: calc(15px + 1vmin);
     font-family: 'Berkshire Swash', cursive;
     color: white;
 }
-}
+} 
+
 
 @keyframes App-logo-spin {
   from {
