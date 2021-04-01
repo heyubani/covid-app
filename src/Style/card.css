@@ -14,21 +14,24 @@
 
 .t1 {
   color: gray;
+  font-size:5vw;
 }
 
 .t2{
   color: red;
+  font-size: 5vw;
 }
 
 .t3{
   color: green;
+  font-size: 5vw;
 }
 .card {
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   background-color: white;
   transition: 0.3s;
-  width: 30%;
-  margin: 10px 10px 10px 10px;
+  width: 35%;
+  margin: 10px 5px 10px 10px;
 }
 
 .card:hover {
@@ -40,11 +43,11 @@
 }
 
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 500px) {
   .card-container{
     display: block;
     padding: 5px;
-    margin: 3px;
+    margin: 1px;
   }
   .card {
     width: 100%;
