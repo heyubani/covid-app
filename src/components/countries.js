@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import Columns from 'react-columns';
 import Search from './search';
+import Format from './utility'
 import '../Style/country.css'
 
 
@@ -63,11 +64,11 @@ class Countries extends Component {
 								<div className="country-card-sub">
 									<ul>
 										<li><h4>{data.country}</h4></li>
-										<li>Cases {data.cases}</li>
-										<li>Deaths {data.deaths}</li>
-										<li>Critical {data.critical}</li>
-										<li>Active {data.active}</li>
-										<li>Rcovered {data.recovered}</li>
+										<li>Cases {Format(data.cases)}</li>
+										<li>Deaths {Format(data.deaths)}</li>
+										<li>Critical {Format(data.critical)}</li>
+										<li>Active {Format(data.active)}</li>
+										<li>Rcovered {Format(data.recovered)}</li>
 									</ul>
 								</div>
 							</div>

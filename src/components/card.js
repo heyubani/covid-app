@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import Format from './utility'
 import '../Style/card.css'
 
 class Card extends Component {
@@ -23,7 +24,7 @@ class Card extends Component {
 				<div className="card-container">
 					<div className="card">
 						<h3>Cases</h3>
-						<h1 className="textUpdate t1">{this.state.update.cases}</h1>
+						<h1 className="textUpdate t1">{Format(this.state.update.cases)}</h1>
 						<div className="sub-container">
 							<p>
 								<small>last updated {lastUpdated}</small>
@@ -32,7 +33,7 @@ class Card extends Component {
 					</div>
 					<div className="card">
 						<h3>Deaths</h3>
-						<h1 className="textUpdate t2">{this.state.update.deaths}</h1>
+						<h1 className="textUpdate t2">{Format(this.state.update.deaths)}</h1>
 						<div className="sub-container">
 							<p>
 								<small>last updated {lastUpdated}</small>
@@ -41,7 +42,7 @@ class Card extends Component {
 					</div>
 					<div className="card">
 						<h3>Recovered</h3>
-						<h1 className="textUpdate t3">{this.state.update.recovered}</h1>
+						<h1 className="textUpdate t3">{Format(this.state.update.recovered)}</h1>
 						<div className="sub-container">
 							<p>
 								<small>last updated {lastUpdated}</small>
